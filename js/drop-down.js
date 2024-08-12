@@ -1,5 +1,5 @@
 $(document).ready(function(){
-    if (!('ontouchstart' in window)) {  // Check if the device is not a touch device
+    if (!('ontouchstart' in window)) {  
         $('.nav-item.dropdown').hover(
             function () {
                 var $dropdownMenu = $(this).find('.dropdown-menu').first();
@@ -13,7 +13,6 @@ $(document).ready(function(){
             }
         );
         
-        // For keyboard accessibility
         $('.nav-item.dropdown').focusin(function() {
             var $dropdownMenu = $(this).find('.dropdown-menu').first();
             $dropdownMenu.stop(true, true).slideDown(300).addClass('show');

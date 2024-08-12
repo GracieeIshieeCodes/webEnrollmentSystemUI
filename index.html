@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="css/chatbot.css">
+    <link rel="stylesheet" href="css/landingcss/styles.css">
+    <link rel="stylesheet" href="css/landingcss/chatbot.css">
     <link rel="stylesheet" href="bootstrap-5.3.3-dist/css/bootstrap.min.css">
     <link rel="icon" type="image/x-icon" href="css/img/info-icon.png" sizes="16x16">
     <title>Informatics Northgate - Master the Digital Age</title>
@@ -39,9 +39,9 @@
                         Login
                     </a>
                     <ul class="dropdown-menu">
-                        <li><a class="dropdown-item text-light" href="#"><i class="fas fa-user-graduate me-2"></i> Student</a></li>
+                        <li><a class="dropdown-item text-light" href="student_login.html"><i class="fas fa-user-graduate me-2"></i> Student</a></li>
                         <li><hr class="dropdown-divider"></li>
-                        <li><a class="dropdown-item text-light" href="#"><i class="fas fa-user-tie me-2"></i> Registrar</a></li>
+                        <li><a class="dropdown-item text-light" href="registrar_login.html"><i class="fas fa-user-tie me-2"></i> Registrar</a></li>
                     </ul>
                 </li>
             </ul>
@@ -109,9 +109,9 @@
 </section>
 <!-- END CAROUSEL -->
  <!-- ABOUT US SECTION -->
- <section class="py-3 py-md-5 about-us-section" id="about">
-    <div class="container">
-        <div class="row gy-3 gy-md-4 align-items-center">
+ <section class="py-3 py-md-5 about-us-section reveal" id="about">
+    <div class="container ">
+        <div class="row gy-3 gy-md-4 align-items-center ">
             <div class="col-12 col-lg-6 col-xl-5">
                 <img class="img-fluid rounded opacity-75" loading="lazy" src="css/img/slides/info-slide-4.png" alt="About Us Image">
             </div>
@@ -151,8 +151,8 @@
 </section>
 <!-- END ABOUT US SECTION -->
 <!-- CORE VALUES SECTION -->
-<section class="py-3 py-md-5 core-values-section" id="core">
-    <div class="container">
+<section class="py-3 py-md-5 core-values-section reveal" id="core">
+    <div class="container ">
         <div class="text-center mb-5">
             <h1 class="fw-bold">Our Core Values</h1>
         </div>
@@ -223,7 +223,7 @@
 </section>
 <!-- END CORE VALUES SECTION -->
 <!-- MILESTONES SECTION -->
-<section class="py-3 py-md-5 milestones-section" id="why">
+<section class="py-3 py-md-5 milestones-section reveal" id="why">
     <div class="container">
         <h1 class="text-center mb-4 fw-bold">Our Milestones</h1>
         <hr>
@@ -329,10 +329,10 @@
 </section>
 <!-- END MILESTONES SECTION -->
 <!-- WHY CHOOSE INFORMATICS SECTION -->
-<section class="py-5 why-choose-section">
+<section class="py-5 why-choose-section reveal">
     <div class="container">
         <div class="text-center mb-4">
-            <h1 class="section-title">Why Choose Informatics?</h1>
+            <h1 class="section-title fw-bold">Why Choose Informatics?</h1>
             <p class="section-description">
                 Informatics values your dreams as much as we value quality education. Thus, putting you first by providing a well-rounded curriculum that leads to employability and sustainability is our utmost priority.
             </p>
@@ -375,7 +375,7 @@
 </section>
 <!-- END WHY CHOOSE INFORMATICS SECTION -->
 <!-- CONTACT -->
-<section class="py-3 py-md-5" id="contact">
+<section class="py-3 py-md-5 reveal" id="contact">
     <div class="container-contact">
         <div class="row gy-3 gy-md-4 gy-lg-0 justify-content-center">
             <div class="col-12">
@@ -393,7 +393,7 @@
                                         <i class="fa-solid fa-location-dot"></i>
                                     </div>
                                     <div>
-                                        <h4 class="mb-2">Address</h4>
+                                        <h4 class="mb-2 fw-bold">Address</h4>
                                         <address class="mb-0 text-secondary">Indo China Drive, Northgate Cyberzone Filinvest Corporate City, Alabang Muntinlupa City, Metro Manila</address>
                                     </div>
                                 </div>
@@ -402,7 +402,7 @@
                                         <i class="fa-solid fa-phone"></i>
                                     </div>
                                     <div>
-                                        <h4 class="mb-2">Phone</h4>
+                                        <h4 class="mb-2 fw-bold">Phone</h4>
                                         <p class="mb-0">
                                             <a class="link-secondary text-decoration-none" href="tel:+15057922430">(505) 792-2430</a>
                                         </p>
@@ -413,7 +413,7 @@
                                         <i class="fa-solid fa-envelope"></i>
                                     </div>
                                     <div>
-                                        <h4 class="mb-2">E-Mail</h4>
+                                        <h4 class="mb-2 fw-bold">E-Mail</h4>
                                         <p>
                                             <a class="link-secondary text-decoration-none" href="mailto:demo@yourdomain.com">demo@yourdomain.com</a>
                                         </p>
@@ -484,18 +484,21 @@
         -->
     </div>
     <div class="chatbot-input">
-        <input type="text" placeholder="Type your message...">
-        <button><i class="fas fa-paper-plane"></i></button>
+        <input type="text" id="chatInput" placeholder="Type your message..." oninput="handleInput()">
+        <button id="sendButton"><i class="fas fa-paper-plane"></i></button>
     </div>
 </div>
    <!--END CHABOT -->
     <!--SCRIPT-->
     <script src="bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="js/burger.js"></script>
-    <script src="js/drop-down.js"></script>
-    <script src="js/carousel-typo.js"></script>
-    <script src="js/chatbot-toggle.js"></script>
     <script src="https://kit.fontawesome.com/5d90abced0.js" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="js/landingjs/burger.js"></script>
+    <script src="js/landingjs/drop-down.js"></script>
+    <script src="js/landingjs/carousel-typo.js"></script>
+    <script src="js/landingjs/scroll.js"> </script>
+    <script src="js/landingjs/chatbot-toggle.js"></script>  
+    <script src="js/landingjs/handleInput.js"> </script>
 </body>
 </html>
